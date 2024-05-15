@@ -2,32 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@import url("https://fonts.googleapis.com/css2?family=Freeman&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Freeman&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@font-face {
+  font-family: "Nourd";
+  src: url("/assets/Nourd/nourd_regular.ttf");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: "Nourd Bold";
+  src: url("/assets/Nourd/nourd_bold.ttf");
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@font-face {
+  font-family: "Agrandir";
+  src: url("/assets/Agrandir/Agrandir-GrandHeavy.otf");
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+@font-face {
+  font-family: "Migra";
+  src: url("/assets/Migra/MigraItalic-Extrabolditalic.ttf");
+}
+
+@font-face {
+  font-family: "Migra Extrabold";
+  src: url("/assets/Migra/Migra-Extrabold.ttf");
+}
+
+section {
+  scroll-margin-top: 0;
+  scroll-padding-top: 0;
+}
+
+.white-section {
+  position: relative;
+  overflow: hidden; /* Ensures no overflow from pseudo-elements */
+}
+
+.white-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%; /* Half the width of the container */
+  height: 20%; /* Adjust based on your preference */
+  background-color: #10b981; /* Same as green section bg color */
+  border-radius: 100% 100% 0 0;
+}
+
+.green-section {
+  position: relative;
+  overflow: hidden; /* Ensures no overflow from pseudo-elements */
+}
+
+.green-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%; /* Half the width of the container */
+  height: 20%; /* Adjust based on your preference */
+  background-color: #ffffff; /* Same as white section bg color */
+  border-radius: 0 0 100% 100%;
 }
