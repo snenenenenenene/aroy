@@ -6,6 +6,9 @@ const HashHandler = ({ containerId }: { containerId: string }) => {
   const { setCurrentHash } = useHash();
 
   useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
     const container = document.getElementById(containerId);
 
     if (!container) {
