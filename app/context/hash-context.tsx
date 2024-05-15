@@ -9,9 +9,7 @@ const HashContext = createContext(
 );
 
 export const HashProvider = ({ children }: { children: React.ReactNode }) => {
-  const [currentHash, setCurrentHash] = useState(
-    typeof window !== undefined ? window.location.hash : ""
-  );
+  const [currentHash, setCurrentHash] = useState("");
 
   return (
     <HashContext.Provider value={{ currentHash, setCurrentHash }}>
