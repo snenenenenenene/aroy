@@ -12,9 +12,33 @@ export default function Hero() {
       {/* translate-x-1/2 */}
       <picture className="absolute flex lg:-right-1/4 lg:translate-x-0 -translate-y-[7%] lg:-translate-y-0 lg:-top-1/4 h-full -z-10  filter">
         <img
-          alt="Hero background"
+          alt="Cilantro"
+          className="absolute drop-shadow-xl w-64 h-64 rotate-90 -left-10 bottom-1/2"
+          src="/assets/cilantro_1.png"
+        />
+
+        <img
+          alt="Pepper"
+          className="absolute drop-shadow-xl w-64 h-64 -left-40 -rotate-90 top-1/2"
+          src="/assets/pepper_1.png"
+        />
+
+        <img
+          alt="Cilantro"
+          className="absolute drop-shadow-xl scale-90 w-56 h-56 -left-52 rotate-[120deg] bottom-28 -z-10"
+          src="/assets/cilantro_4.png"
+        />
+
+        <img
+          alt="Pepper 2"
+          className="absolute drop-shadow-xl w-10 h-10 -left-20 -rotate-90 bottom-80"
+          src="/assets/pepper_2.png"
+        />
+
+        <img
+          alt="Tom Kha Kai"
           src="/assets/TomKhaKai.png"
-          className="w-full h-full object-contain drop-shadow-2xl z-50 lg:scale-120 scale-[85%]"
+          className="w-full h-full object-contain drop-shadow-xl z-50 lg:scale-120 scale-[85%]"
         />
       </picture>
       <span className="flex font-agrandir text-xl uppercase text-light-primary">
