@@ -25,7 +25,7 @@ export default function Sidebar() {
   const { currentHash, setCurrentHash } = useHash();
 
   const handleNavigation = useCallback(
-    (e, hash) => {
+    (e: any, hash: any) => {
       e.preventDefault();
       console.log("Navigating to:", hash);
       if (typeof window !== "undefined") {
