@@ -37,7 +37,7 @@ export default function Hero() {
 
         <img
           alt="Tom Kha Kai"
-          src="/assets/TomKhaKai.png"
+          src="/assets/tom-kha-kai.png"
           className="w-full h-full object-contain drop-shadow-xl z-50 lg:scale-120 scale-[85%]"
         />
       </picture>
