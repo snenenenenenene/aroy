@@ -32,7 +32,7 @@ export default function RootLayout({
         style={{
           scrollBehavior: "smooth",
         }}
-        className={`font-nourd bg-white text-light-white h-screen w-screen flex flex-col text-light`}
+        className={`font-nourd scroll-smooth bg-white text-light-white h-screen w-screen flex flex-col text-light`}
       >
         <HashProvider>
           <HashHandler containerId="scrollContainer" />

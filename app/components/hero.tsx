@@ -63,17 +63,26 @@ export default function Hero() {
         </motion.h1>
         <Link
           href={"/#menus"}
-          className="bg-light-yellow  outline-none text-center flex justify-center items-center uppercase w-full lg:w-[30rem] h-[3rem] underline underline-offset-2 text-2xl"
+          className="bg-light-yellow hover:opacity-90 hover:scale-x-105 transition-all duration-200 outline-none text-center flex justify-center items-center uppercase w-full lg:w-[30rem] h-[3rem] underline underline-offset-2 text-2xl"
         >
           See menus
         </Link>
         <Link
           href={"/#who-i-am"}
-          className="bg-light-green outline-none text-center flex justify-center items-center text-white uppercase w-full lg:w-[30rem] h-[3rem] underline underline-offset-2 text-sm"
+          className="bg-light-green hover:opacity-90 hover:scale-105 transition-all duration-200 outline-none text-center flex justify-center items-center text-white uppercase w-full lg:w-[30rem] h-[3rem] underline underline-offset-2 text-sm"
         >
           Who I am
         </Link>
       </span>
+      <Link
+        href="/#menus"
+        className="absolute font-nourd-bold right-10 bottom-10 gap-4 justify-center flex flex-col items-center"
+      >
+        <p>Scroll down!</p>
+        <div className=" animate-bounce  rounded-full p-3 bg-light-yellow w-[3rem] h-[3rem]">
+          <img src="/assets/arrow-down.svg" />
+        </div>
+      </Link>
     </section>
   );
 }

@@ -46,18 +46,21 @@ export default function Sidebar() {
               href={route.href}
               className={`${
                 currentHash === route.href ? "opacity-100" : "opacity-80"
-              } hover:opacity-100 transition-all bg-blend-multiply font-migra-extrabold text-light-yellow duration-200 ease-in-out flex gap-2 justify-start items-start text-md uppercase`}
+              } hover:opacity-100 transition-all bg-blend-multiply font-migra-extrabold duration-200 ease-in-out flex gap-2 justify-start items-start text-sm uppercase`}
             >
               <div
                 className={`${
-                  currentHash === route.href ? "w-6 h-6" : "w-4 h-4"
-                } bg-light-yellow transition-all duration-200 ease-in-out rounded-full`}
-              />
-              <p
-                className={`${currentHash === route.href ? "flex" : "hidden"}`}
+                  currentHash === route.href ? "h-6 px-2" : "w-4 h-4"
+                } bg-light-yellow text-light-primary transition-all duration-200 flex justify-center items-center ease-in-out rounded-full`}
               >
-                {route.title}
-              </p>
+                <p
+                  className={`${
+                    currentHash === route.href ? "flex" : "hidden"
+                  }`}
+                >
+                  {route.title}
+                </p>
+              </div>
             </a>
           </li>
         ))}

@@ -140,7 +140,7 @@ export default function Menus() {
         <div className="flex flex-col gap-1 lg:ml-auto">
           <a
             href="tel:+32484767586"
-            className="bg-light-yellow text-light-primary flex justify-center items-center  outline-none uppercase w-full lg:w-[30rem] h-[3rem] underline underline-offset-2 text-2xl"
+            className="bg-light-yellow hover:opacity-90 hover:scale-x-105 transition-all duration-200 text-light-primary flex justify-center items-center  outline-none uppercase w-full lg:w-[30rem] h-[3rem] underline underline-offset-2 text-2xl"
           >
             Make an order
           </a>
