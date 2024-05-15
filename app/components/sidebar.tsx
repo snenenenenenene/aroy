@@ -15,10 +15,10 @@ const routes = [
     title: "Who I am",
     href: "#who-i-am",
   },
-  {
-    title: "Contact",
-    href: "#contact",
-  },
+  // {
+  //   title: "Contact",
+  //   href: "#contact",
+  // },
 ];
 
 export default function Sidebar() {
@@ -37,7 +37,7 @@ export default function Sidebar() {
   );
 
   return (
-    <aside className="fixed left-0 z-50 top-0 h-full flex">
+    <aside className="fixed lg:visible invisible left-0 z-50 top-0 h-full flex">
       <ul className="w-full h-full transition-all duration-200 ease-in-out flex flex-col justify-center items-start pt-10 gap-2 pl-2">
         {routes.map((route) => (
           <li key={route.title}>

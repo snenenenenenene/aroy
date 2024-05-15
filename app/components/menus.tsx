@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const menuData = [
   {
     title: "Menu 1",
@@ -61,15 +63,21 @@ export default function Menus() {
       style={{ scrollSnapAlign: "start" }}
       data-section="menus"
       id="menus"
-      className="w-full bg-white flex flex-col min-h-screen h-screen px-20 pt-20 relative"
+      className="w-full bg-white px-4 lg:pb-0 pb-20 flex flex-col h-auto lg:min-h-screen lg:h-screen lg:px-20 pt-20 relative"
     >
-      <div className="absolute bottom-0 left-0 w-1/2 bg-light-dark-green h-40 rounded-tr-full " />
-      <div className="flex">
-        <section className="flex flex-col pr-64">
-          <h2 className="font-migra-extrabold text-light-black text-7xl">
+      <div className="absolute bottom-0 left-0 w-1/2 bg-light-dark-green lg:h-40 h-20 mt-auto rounded-tr-full" />
+
+      <div className="flex lg:flex-row flex-col">
+        <section className="flex flex-col lg:pr-64">
+          <motion.h2
+            initial={{ x: "-20%", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="font-migra-extrabold text-light-black text-7xl"
+          >
             Our favourites
-          </h2>
-          <ul className="list-disc">
+          </motion.h2>
+          <ul className="list-disc list-inside">
             <li className="font-nourd-bold text-light-black text-xl uppercase">
               PHAD THAI
             </li>
@@ -88,8 +96,8 @@ export default function Menus() {
             SEE OUR FULL MENU
           </button> */}
         </section>
-        <picture className="h-96 w-1/2 relative">
-          <h3 className="absolute z-10 -top-10 -right-20 rotate-[14deg] text-light-yellow font-migra-extrabold text-7xl">
+        <picture className="h-96 hidden lg:flex lg:w-1/2 w-full relative">
+          <h3 className="absolute drop-shadow-[5px_5px_0_#3A5527] z-10 -top-10 -right-20 rotate-[14deg] text-light-yellow font-migra-extrabold text-7xl">
             Phad Thai
           </h3>
           <img
@@ -98,7 +106,7 @@ export default function Menus() {
           />
         </picture>
       </div>
-      <div className="w-full h-full grid grid-cols-3 mt-8 gap-20">
+      <div className="w-full h-full grid lg:grid-cols-3 grid-cols-1 mt-8 gap-20">
         {menuData.map((menu) => (
           <section
             className=" bg-white group rounded-xl duration-200 transition-all"
@@ -108,7 +116,7 @@ export default function Menus() {
               <h3 className=" font-migra-extrabold text-5xl ">{menu.title}</h3>
               <p className="w-fit">€ {menu.price} p/p</p>
             </span>
-            <ul className="list-disc">
+            <ul className="list-disc list-inside">
               {menu.items.map((item) => (
                 <li
                   key={item.title}
@@ -121,14 +129,27 @@ export default function Menus() {
           </section>
         ))}
       </div>
+
       {/* Minimum 5 max 20 people */}
-      <span className="text-white text-md mt-auto z-10 flex mb-12">
+      <span className="lg:text-white  lg:p-0 text-light-primary text-md mt-auto z-10 flex flex-col lg:flex-row mb-12 relative">
         <b className=" text-light-yellow text-3xl mr-2">*</b>
         <span>
           <p>Minimum 5 max 20 people. For larger groups, please contact us.</p>
           <p>Fried rice also included.</p>
         </span>
+        <div className="flex flex-col gap-1 lg:ml-auto">
+          <a
+            href="tel:+32484767586"
+            className="bg-light-yellow text-light-primary flex justify-center items-center  outline-none uppercase w-full lg:w-[30rem] h-[3rem] underline underline-offset-2 text-2xl"
+          >
+            Make an order
+          </a>
+          <p className="text-lg flex justify-center items-center font-nourd-bold text-light-primary">
+            or call +32 484 76 75 86
+          </p>
+        </div>
       </span>
+      {/* <section className="w-1/2 h-[20rem] bg-light-dark-green rounded-tr-full flex" /> */}
     </section>
   );
 }
