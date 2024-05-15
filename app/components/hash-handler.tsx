@@ -31,7 +31,7 @@ const HashHandler = ({ containerId }: { containerId: string }) => {
         const newUrl = `#${currentSectionId}`;
         if (newUrl !== window.location.hash) {
           console.log("Updating URL hash to:", newUrl);
-          window.history.replaceState(null, null, newUrl);
+          window.history.replaceState(null, null as any, newUrl);
           setCurrentHash(newUrl); // Update the shared state
         }
       }
