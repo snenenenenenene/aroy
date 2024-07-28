@@ -8,11 +8,11 @@ const routes = [
     href: "#aroy",
   },
   {
-    title: "Menus",
+    title: "Menu's",
     href: "#menus",
   },
   {
-    title: "Who I am",
+    title: "Wie ik ben",
     href: "#who-i-am",
   },
   // {
@@ -44,19 +44,16 @@ export default function Sidebar() {
             <a
               onClick={(e) => handleNavigation(e, route.href)}
               href={route.href}
-              className={`${
-                currentHash === route.href ? "opacity-100" : "opacity-80"
-              } hover:opacity-100 transition-all bg-blend-multiply font-migra-extrabold duration-200 ease-in-out flex gap-2 justify-start items-start text-sm uppercase`}
+              className={`${currentHash === route.href ? "opacity-100" : "opacity-80"
+                } hover:opacity-100 transition-all bg-blend-multiply font-migra-extrabold duration-200 ease-in-out flex gap-2 justify-start items-start text-sm uppercase`}
             >
               <div
-                className={`${
-                  currentHash === route.href ? "h-6 px-2" : "w-4 h-4"
-                } bg-light-yellow text-light-primary transition-all duration-200 flex justify-center items-center ease-in-out rounded-full`}
+                className={`${currentHash === route.href ? "h-6 px-2" : "w-4 h-4"
+                  } bg-light-yellow text-light-primary transition-all duration-200 flex justify-center items-center ease-in-out rounded-full`}
               >
                 <p
-                  className={`${
-                    currentHash === route.href ? "flex" : "hidden"
-                  }`}
+                  className={`${currentHash === route.href ? "flex" : "hidden"
+                    }`}
                 >
                   {route.title}
                 </p>

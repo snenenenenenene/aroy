@@ -17,7 +17,7 @@ export default function WhoIAm() {
           className="flex text-light-green justify-center items-center h-full w-full"
         >
           <h3 className="lg:text-2xl text-md font-nourd-bold uppercase">
-            See menus
+            Bekijk Menu&apos;s
           </h3>
         </Link>
       </div>
@@ -32,8 +32,8 @@ export default function WhoIAm() {
       </motion.p>
       <div className="flex lg:flex-row lg:pt-0 pt-10 lg:pl-0 pl-4 flex-col w-full h-full">
         <span className="lg:w-1/4 w-full lg:h-full pr-0 flex flex-col">
-          <h1 className="lg:text-5xl text-xl text-light-yellow font-migra-extrabold">
-            Hello I am
+          <h1 className="lg:text-4xl text-xl text-light-yellow font-migra-extrabold">
+            Hallo ik ben
             <br />
             <b className="lg:text-[9rem] text-6xl">Noi</b>
           </h1>

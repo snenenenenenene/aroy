@@ -72,13 +72,13 @@ export default function Hero() {
           href={"/#menus"}
           className="bg-light-yellow hover:opacity-90 hover:scale-x-105 transition-all duration-200 outline-none text-center flex justify-center items-center uppercase w-full lg:w-[30rem] h-[3rem] underline underline-offset-2 text-2xl"
         >
-          See menus
+          Bekijk menu&apos;s
         </Link>
         <Link
           href={"/#who-i-am"}
           className="bg-light-green hover:opacity-90 hover:scale-105 transition-all duration-200 outline-none text-center flex justify-center items-center text-white uppercase w-full lg:w-[30rem] h-[3rem] underline underline-offset-2 text-sm"
         >
-          Who I am
+          Wie ik ben
         </Link>
       </span>
       <Link
