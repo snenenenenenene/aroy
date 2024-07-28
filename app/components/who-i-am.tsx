@@ -45,18 +45,24 @@ export default function WhoIAm() {
             />
           </picture>
         </span>
-        <div className="flex flex-col gap-8 lg:text-3xl font-nourd lg:pl-32 lg:mt-40 mt-10">
+        <div className="flex flex-col gap-8 lg:text-xl font-nourd lg:pl-32 lg:mt-40 mt-10">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-            doloremque distinctio, non nesciunt repellendus repellat, qui dicta
-            corporis et porro asperiores illum rem voluptates! Numquam enim
-            sapiente vitae assumenda qui.
+            Welkom op mijn culinaire reis! Mijn naam is Noi en ik ben verheugd om de authentieke smaken van de Thaise keuken bij u thuis te brengen. Mijn passie voor koken begon in mijn geboortestad in Thailand, waar ik de geheimen van traditionele recepten leerde die al generaties lang worden doorgegeven.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-            doloremque distinctio, non nesciunt repellendus repellat, qui dicta
-            corporis et porro asperiores illum rem voluptates! Numquam enim
-            sapiente vitae assumenda qui.
+
+            Jarenlang had ik een succesvol Thais restaurant, waar ik klanten verrukte met mijn verse, smaakvolle gerechten. Nu heb ik besloten om een nieuw avontuur aan te gaan en dezelfde heerlijke, huisgemaakte Thaise maaltijden naar uw eettafel te brengen.
+          </p>
+          <p>
+
+            Mijn doel is om een gezellige en authentieke Thaise eetervaring bij u thuis te creëren. Er is niets beters dan samen met dierbaren aan tafel te genieten van een heerlijke maaltijd. Daarom breng ik de rijke en geurige smaken van Thailand direct naar uw huis, zodat u kunt genieten van een bijzondere eetervaring zonder de deur uit te hoeven.
+          </p>
+          <p>
+            Ik kijk ernaar uit om mijn liefde voor de Thaise keuken met u te delen en samen onvergetelijke culinaire momenten te creëren.
+          </p>
+          <p>
+            Met warme groet,
+            Noi
           </p>
         </div>
       </div>

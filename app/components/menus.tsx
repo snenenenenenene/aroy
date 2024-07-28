@@ -97,11 +97,11 @@ export default function Menus() {
           </button> */}
         </section>
         <picture className="h-96 hidden lg:flex lg:w-1/2 w-full relative">
-          <h3 className="absolute drop-shadow-[5px_5px_0_#3A5527] z-10 -top-10 -right-20 rotate-[14deg] text-light-yellow font-migra-extrabold text-7xl">
+          <h3 className="absolute drop-shadow-[5px_0px_0_#3A5527] z-10 -top-10 -right-20 rotate-[14deg] text-light-yellow font-migra-extrabold text-7xl">
             Phad Thai
           </h3>
           <img
-            className="w-full h-full object-cover rounded-lg shadow-lg"
+            className="w-full h-full drop-shadow-[15px_15px_0_#88734E] object-cover rounded-lg shadow-lg"
             src="/assets/pad-thai.jpg"
           />
         </picture>

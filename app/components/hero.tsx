@@ -42,8 +42,15 @@ export default function Hero() {
         />
       </picture>
       <span className="flex font-agrandir text-xl uppercase text-light-primary">
-        <picture>
-          <img className="h-40 lg:-translate-y-12" src="/assets/logo.png" />
+        {/* lg:-translate-y-12 */}
+        <picture className="relative ease-in-out w-40 h-40 flex justify-center items-center">
+          <img
+            alt="logo"
+            width={40}
+            height={40}
+            className="h-40 w-40 object-contain"
+            src="/assets/logo.png"
+          />
         </picture>
         <p className="flex justify-center items-center lg:justify-start lg:items-start lg:translate-y-5 lg:-translate-x-4 font-agrandir">
           Aroy
