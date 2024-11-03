@@ -74,10 +74,10 @@ const DishItem = memo(({ item }: { item: MenuItem }) => (
 			<p className="text-sm text-white/60 mt-2 line-clamp-2">
 				{item.description}
 			</p>
-			{item.choiceText && (
+			{(item as any).choiceText && (
 				<div className="mt-4 flex items-center gap-4">
 					<div className="h-px bg-amber-500/20 flex-1" />
-					<span className="text-amber-500 font-bold">{item.choiceText}</span>
+					<span className="text-amber-500 font-bold">{(item as any).choiceText}</span>
 					<div className="h-px bg-amber-500/20 flex-1" />
 				</div>
 			)}
@@ -146,9 +146,10 @@ const RegularMenuCard = memo(({ menu }: { menu: Menu }) => (
 					<h3 className="text-2xl font-bold text-amber-500 group-hover:text-amber-400 transition-colors">
 						{menu.title}
 					</h3>
-					{menu.choiceNote && (
+					{(menu as any).choiceNote && (
 						<p className="text-amber-500/80 mt-1 text-sm font-medium">
-							{menu.choiceNote}
+							{(menu as any).choiceNote}
+							{(menu as any).choiceNote}
 						</p>
 					)}
 					<p className="text-white/60 mt-1 max-w-md">
