@@ -22,7 +22,7 @@ export default function Navigation() {
 			let current = '';
 
 			sections.forEach(section => {
-				const sectionTop = section.offsetTop;
+				const sectionTop = (section as any).offsetTop;
 				const sectionHeight = section.clientHeight;
 				if (window.scrollY >= sectionTop - 100) {
 					current = section.getAttribute('id') || '';
@@ -72,8 +72,8 @@ export default function Navigation() {
 								key={item.href}
 								onClick={() => scrollToSection(item.href)}
 								className={`px-6 py-2 rounded-full transition-all ${activeSection === item.href
-										? 'bg-amber-500 text-black'
-										: 'text-white/80 hover:bg-white/10 hover:text-white'
+									? 'bg-amber-500 text-black'
+									: 'text-white/80 hover:bg-white/10 hover:text-white'
 									}`}
 							>
 								{item.name}
@@ -117,8 +117,8 @@ export default function Navigation() {
 									key={item.href}
 									onClick={() => scrollToSection(item.href)}
 									className={`w-full px-6 py-3 rounded-lg text-left transition-all ${activeSection === item.href
-											? 'bg-amber-500 text-black'
-											: 'text-white/80 hover:bg-white/10 hover:text-white'
+										? 'bg-amber-500 text-black'
+										: 'text-white/80 hover:bg-white/10 hover:text-white'
 										}`}
 								>
 									{item.name}
