@@ -191,7 +191,7 @@ export const MenuCardContainer = memo(({ menus }: { menus: Menu[] }) => {
 			animate="visible"
 		>
 			{menus.map((menu, index) => (
-				<MenuCard key={menu.title} menu={menu} index={index} />
+				<MenuCard key={menu.title} menu={menu} />
 			))}
 		</motion.div>
 	);
