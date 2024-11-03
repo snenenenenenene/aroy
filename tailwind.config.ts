@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
       fontFamily: {
         nourd: ["Nourd", "sans-serif"],
         "nourd-bold": ["Nourd Bold", "sans-serif"],

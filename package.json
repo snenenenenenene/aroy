@@ -1,15 +1,20 @@
 {
   "name": "aroy",
   "version": "0.1.0",
+  "homepage": "https://www.aroybrasschaat.be/",
+  "author": "Senne Bels <sennebels@gmail.com> (https://sennebels.xyz)",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "framer-motion": "^11.1.7",
+    "gsap": "^3.12.5",
+    "lucide-react": "^0.454.0",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18"
