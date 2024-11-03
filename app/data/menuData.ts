@@ -255,11 +255,3 @@ export type MenuItem = {
 	  }
 	}
   ];
-  
-  export const generalNotes = [
-	"Witte en gebakken rijst is altijd inbegrepen in alle menu\'s",
-	"Minimaal 5 en maximaal 20 personen per reservering",
-	"Graag 24 uur van tevoren reserveren",
-	"Gerechten kunnen aangepast worden naar uw smaak",
-	"Allergieën? Laat het ons weten"
-  ];

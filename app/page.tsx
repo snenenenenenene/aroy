@@ -4,8 +4,7 @@ import { motion } from 'framer-motion';
 import { Phone, MapPin, Users, Info } from 'lucide-react';
 import Image from 'next/image';
 import Navigation from './components/Navigation';
-import MenuCard, { MenuCardContainer } from './components/MenuCard';
-import { menuData, generalNotes } from './data/menuData';
+import MenuSection from './components/MenuSection';
 
 // Animation variants for better reuse and performance
 const fadeInUp = {
@@ -79,74 +78,7 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Menu Section */}
-      <section id="menu" className="py-32 scroll-mt-16" aria-label="Menu section">
-        <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-amber-200 to-amber-500 bg-clip-text text-transparent">
-              Onze Menu&apos;s
-            </h2>
-            <p className="text-white/60 max-w-2xl mx-auto">
-              Kies uit onze zorgvuldig samengestelde menu&apos;s voor een onvergetelijke Thaise ervaring
-            </p>
-          </motion.div>
-
-          <MenuCardContainer menus={menuData} />
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="mt-12 bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10"
-          >
-            <div className="flex flex-col md:flex-row gap-8 justify-between items-center">
-              <div className="flex flex-col md:flex-row gap-8">
-                <div className="flex items-center gap-3">
-                  <Users className="text-amber-500" aria-hidden="true" />
-                  <span className="text-white/80">5-20 personen</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Info className="text-amber-500" aria-hidden="true" />
-                  <span className="text-white/80">Inclusief witte en gebakken rijst</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <MapPin className="text-amber-500" aria-hidden="true" />
-                  <span className="text-white/80">Brasschaat · Schilde · Kapellen</span>
-                </div>
-              </div>
-
-              <a
-                href="tel:+32484767586"
-                className="flex items-center gap-2 px-8 py-4 bg-amber-500 text-black rounded-full 
-            hover:bg-amber-400 transition-all whitespace-nowrap focus:ring-2 focus:ring-offset-2 
-            focus:ring-amber-500 focus:outline-none"
-                aria-label="Bel +32 484 76 75 86 om te reserveren"
-              >
-                <Phone className="w-5 h-5" aria-hidden="true" />
-                +32 484 76 75 86
-              </a>
-            </div>
-
-            <div className="mt-8 pt-8 border-t border-white/10">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {generalNotes.map((note, index) => (
-                  <div
-                    key={index}
-                    className="flex items-start gap-3 text-white/60 text-sm"
-                  >
-                    <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 shrink-0" />
-                    <p>{note}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <MenuSection />
 
       {/* About Section */}
       <section
