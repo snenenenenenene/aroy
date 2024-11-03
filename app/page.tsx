@@ -134,6 +134,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer
+        id='contact'
         className="py-12 backdrop-blur-sm border-t border-white/10"
         role="contentinfo"
       >
