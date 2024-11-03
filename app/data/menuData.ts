@@ -1,4 +1,3 @@
-// menuData.ts
 export type MenuItem = {
 	name: string;
 	thaiName: string;
@@ -7,6 +6,7 @@ export type MenuItem = {
 	spiceLevel?: 1 | 2 | 3;
 	isChoice?: boolean;
 	choiceGroup?: string;
+	choiceText?: string; // "OF" text for choices, if applicable
   };
   
   export type MenuSection = {
@@ -15,13 +15,15 @@ export type MenuItem = {
   };
   
   export type Menu = {
-	title: string;
-	price: number;
-	description: string;
+	title: string;              // e.g., "Menu 1"
+	price: number;              // e.g., 50.0
+	description: string;        // Brief description of the menu
+	choiceNote?: string;        // e.g., "Keuze uit één voorgerecht"
 	items: MenuSection;
-	isCustom?: boolean;
-	contactText?: string;
+	isCustom?: boolean;         // For custom menu option
+	contactText?: string;       // Text for custom menu contact button
   };
+  
   
   export const menuData: Menu[] = [
 	{
