@@ -79,7 +79,7 @@ export default function Home() {
               className="px-8 py-4 bg-amber-500 rounded-full text-black hover:bg-amber-400 transition-all focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 focus:outline-none"
               aria-label="Bekijk onze menu's"
             >
-              Bekijk Menu's
+              Bekijk Menu&apos;s
             </a>
             <a
               href="tel:+32484767586"
@@ -164,7 +164,7 @@ export default function Home() {
                   verse al dente krachtiger en beter smaakt dan uithaal dewelke gemiddeld half uur in verpakking zit.
                 </p>
                 <p>
-                  Nu deel ik graag mijn kunsten en passie bij u thuis, vers en gemakkelijk. You're the king!
+                  Nu deel ik graag mijn kunsten en passie bij u thuis, vers en gemakkelijk. You&apos;re the king!
                 </p>
               </div>
             </motion.div>
