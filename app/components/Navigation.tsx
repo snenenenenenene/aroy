@@ -5,7 +5,6 @@ import { Menu as MenuIcon, X } from 'lucide-react';
 import Image from 'next/image';
 
 const navigationItems = [
-	{ name: 'Home', href: 'home' },
 	{ name: "Menu's", href: 'menu' },
 	{ name: 'Over Ons', href: 'over-ons' },
 	{ name: 'Contact', href: 'contact' }
@@ -53,7 +52,10 @@ export default function Navigation() {
 		<>
 			<nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 backdrop-blur-lg bg-black/20 rounded-full p-1.5 border border-white/10">
 				<div className="hidden md:flex items-center gap-6 px-4">
-					<div className="flex items-center gap-3">
+					<button
+						onClick={() => scrollToSection('home')}
+						className="flex items-center gap-3"
+					>
 						<Image
 							src="/assets/logo.png"
 							alt="Aroy Logo"
@@ -64,7 +66,7 @@ export default function Navigation() {
 						<span className="font-migra-extrabold text-2xl bg-gradient-to-r from-amber-200 to-amber-500 bg-clip-text text-transparent">
 							AROY
 						</span>
-					</div>
+					</button>
 					<div className="h-8 w-px bg-white/10" />
 					<div className="flex gap-4">
 						{navigationItems.map((item) => (
@@ -84,7 +86,10 @@ export default function Navigation() {
 
 				{/* Mobile menu button */}
 				<div className="md:hidden flex items-center justify-between px-4 w-screen max-w-[calc(100vw-3rem)]">
-					<div className="flex items-center gap-3">
+					<button
+						onClick={() => scrollToSection('home')}
+						className="flex items-center gap-3"
+					>
 						<Image
 							src="/assets/logo.png"
 							alt="Aroy Logo"
@@ -95,7 +100,7 @@ export default function Navigation() {
 						<span className="font-migra-extrabold text-xl bg-gradient-to-r from-amber-200 to-amber-500 bg-clip-text text-transparent">
 							AROY
 						</span>
-					</div>
+					</button>
 					<button
 						onClick={() => setIsMenuOpen(!isMenuOpen)}
 						className="p-2 text-white/80 hover:text-white"
@@ -125,7 +130,7 @@ export default function Navigation() {
 								</button>
 							))}
 							<div className="pt-4 mt-4 border-t border-white/10">
-								<a
+								<a 
 									href="tel:+32484767586"
 									className="flex items-center justify-center gap-2 w-full px-6 py-3 bg-amber-500 text-black rounded-lg hover:bg-amber-400 transition-colors"
 								>

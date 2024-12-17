@@ -112,9 +112,6 @@ export default function MorphingGradientBackground() {
 					}}
 				/>
 			</div>
-
-			{/* Noise overlay */}
-			<div className="absolute inset-0 bg-noise opacity-20 mix-blend-soft-light pointer-events-none" />
 		</div>
 	);
 }

@@ -1,11 +1,17 @@
 // RootLayout.tsx
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Charm } from "next/font/google";
 import "./globals.css";
 import { AnimatePresence } from "framer-motion";
 import MorphingGradientBackground from "./components/MorphingGradientBackground";
+import { OrderProvider } from './context/OrderContext';
 
 const inter = Inter({ subsets: ["latin"] });
+const charm = Charm({ 
+  weight: ['400', '700'],
+  subsets: ["latin"],
+  variable: '--font-charm',
+});
 
 export const metadata: Metadata = {
   title: "Aroy Homecooking",
@@ -41,10 +47,12 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
   return (
-    <html lang="en">
-      <body className="bg-[#080808] min-h-screen font-nourd">
-        <MorphingGradientBackground />
-        <div className="relative z-10">{children}</div>
+    <html lang="en" className={`${charm.variable}`}>
+      <body className={`${inter.className} bg-[#080808] min-h-screen`}>
+        <OrderProvider>
+          <MorphingGradientBackground />
+          <div className="relative z-10">{children}</div>
+        </OrderProvider>
       </body>
     </html>
   );

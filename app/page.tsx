@@ -1,10 +1,11 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Phone, MapPin, Users, Info } from 'lucide-react';
+import { Phone } from 'lucide-react';
 import Image from 'next/image';
 import Navigation from './components/Navigation';
 import MenuSection from './components/MenuSection';
+import InfoSection from './components/InfoSection';
 
 // Animation variants for better reuse and performance
 const fadeInUp = {
@@ -33,12 +34,25 @@ export default function Home() {
       {/* Hero Section */}
       <section
         id="home"
-        className="relative min-h-screen flex items-center justify-center"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden"
         aria-label="Home section"
       >
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/assets/images/aroy13.jpg"
+            alt="Thai Cuisine Background"
+            fill
+            className="object-cover opacity-30"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black" />
+        </div>
+
+        {/* Content */}
         <motion.div
           {...fadeInUp}
-          className="text-center px-4"
+          className="relative z-10 text-center px-4"
         >
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
@@ -63,9 +77,9 @@ export default function Home() {
             <a
               href="#menu"
               className="px-8 py-4 bg-amber-500 rounded-full text-black hover:bg-amber-400 transition-all focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 focus:outline-none"
-              aria-label="Bekijk onze menu&apos;s"
+              aria-label="Bekijk onze menu's"
             >
-              Bekijk Menu&apos;s
+              Bekijk Menu's
             </a>
             <a
               href="tel:+32484767586"
@@ -76,6 +90,9 @@ export default function Home() {
             </a>
           </div>
         </motion.div>
+
+        {/* Decorative bottom fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent z-10" />
       </section>
 
       <MenuSection />
@@ -83,10 +100,28 @@ export default function Home() {
       {/* About Section */}
       <section
         id="over-ons"
-        className="py-32 scroll-mt-16"
+        className="min-h-screen relative flex items-center py-24 scroll-mt-16 overflow-hidden"
         aria-label="Over ons section"
       >
-        <div className="max-w-7xl mx-auto px-4">
+        {/* Decorative Images */}
+        <div className="absolute -right-20 top-20 w-64 h-64 opacity-20 rotate-12 pointer-events-none">
+          <Image
+            src="/assets/images/aroy4.jpg"
+            alt=""
+            fill
+            className="object-cover rounded-3xl"
+          />
+        </div>
+        <div className="absolute -left-20 bottom-20 w-64 h-64 opacity-20 -rotate-12 pointer-events-none">
+          <Image
+            src="/assets/images/aroy7.jpg"
+            alt=""
+            fill
+            className="object-cover rounded-3xl"
+          />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <motion.div
               {...fadeInLeft}
@@ -115,16 +150,21 @@ export default function Home() {
               </h2>
               <div className="space-y-6 text-white/80">
                 <p>
-                  Welkom op mijn culinaire reis! Als Thaise chef-kok breng ik de authentieke
-                  smaken van mijn thuisland naar uw keuken.
+                  Ik ben in 1998 gearriveerd te België en bracht zo als eerste chef de Thaise smaken in België. 
+                  Heb onmiddellijk Nederlands geleerd met avondschool. Ik ben Thais chef-kok en heb later ook hier 
+                  in België drie jaar traiteur opleiding voltooid.
                 </p>
                 <p>
-                  Na jaren ervaring in mijn eigen restaurant, deel ik nu mijn passie
-                  voor Thaise gerechten door persoonlijke kookservices aan huis aan te bieden.
+                  In 2000 heb ik mijn eerste succesvolle zaak geopend te Deurne (Bosuil) restaurant waar ik 20 jaar 
+                  mijn Thaise culinaire kunsten heb gedeeld. Vele mensen kennen mij ook als chefkok uitbater van het 
+                  uithaalrestaurant Aroy te Brasschaat.
                 </p>
                 <p>
-                  Mijn doel is om een onvergetelijke eetervaring te creëren die de warmte
-                  en gastvrijheid van Thailand combineert met het comfort van uw eigen huis.
+                  Voor de klassieker Pad Thai kwam men van ver deze uit te halen. U moet natuurlijk weten dat de echte 
+                  verse al dente krachtiger en beter smaakt dan uithaal dewelke gemiddeld half uur in verpakking zit.
+                </p>
+                <p>
+                  Nu deel ik graag mijn kunsten en passie bij u thuis, vers en gemakkelijk. You're the king!
                 </p>
               </div>
             </motion.div>
@@ -132,65 +172,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer
-        id='contact'
-        className="py-12 backdrop-blur-sm border-t border-white/10"
-        role="contentinfo"
-      >
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-            <div className="flex items-center gap-4">
-              <div className="relative h-12 w-12">
-                <Image
-                  src="/assets/logo.png"
-                  alt="Aroy logo"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-amber-200 to-amber-500 bg-clip-text text-transparent">
-                AROY
-              </span>
-            </div>
-
-            <div className="flex flex-col md:flex-row items-center gap-8">
-              <div className="flex items-center gap-3">
-                <Phone className="text-amber-500" aria-hidden="true" />
-                <a
-                  href="tel:+32484767586"
-                  className="text-white/80 hover:text-amber-500 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-md"
-                >
-                  +32 484 76 75 86
-                </a>
-              </div>
-              <div className="flex items-center gap-3">
-                <MapPin className="text-amber-500" aria-hidden="true" />
-                <span className="text-white/80">Brasschaat · Schilde · Kapellen</span>
-              </div>
-            </div>
-
-            <div className="text-white/40 text-sm">
-              © {new Date().getFullYear()} Aroy Thai Homecooking
-            </div>
-          </div>
-
-          <div className="mt-8 pt-8 border-t border-white/10 text-center text-white/40 text-sm">
-            <p>
-              Website developed by{' '}
-              <a
-                href="https://sennebels.xyz"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-amber-500 hover:text-amber-400 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-md"
-                aria-label="Visit Senne Bels website"
-              >
-                Senne Bels
-              </a>
-            </p>
-          </div>
-        </div>
-      </footer>
+      <InfoSection />
     </div>
   );
 }
