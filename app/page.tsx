@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Navigation from './components/Navigation';
 import MenuSection from './components/MenuSection';
 import InfoSection from './components/InfoSection';
+import { DevelopmentBanner } from './components/DevelopmentBanner';
 
 // Animation variants for better reuse and performance
 const fadeInUp = {
@@ -173,6 +174,7 @@ export default function Home() {
       </section>
 
       <InfoSection />
+      <DevelopmentBanner />
     </div>
   );
 }
