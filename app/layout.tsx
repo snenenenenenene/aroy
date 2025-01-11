@@ -5,6 +5,7 @@ import "./globals.css";
 import { AnimatePresence } from "framer-motion";
 import MorphingGradientBackground from "./components/MorphingGradientBackground";
 import { OrderProvider } from './context/OrderContext';
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ subsets: ["latin"] });
 const charm = Charm({ 
@@ -49,6 +50,7 @@ const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
   return (
     <html lang="en" className={`${charm.variable}`}>
       <body className={`${inter.className} bg-[#080808] min-h-screen`}>
+        <Analytics/>
         <OrderProvider>
           <MorphingGradientBackground />
           <div className="relative z-10">{children}</div>
