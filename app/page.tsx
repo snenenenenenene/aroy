@@ -131,7 +131,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-r from-amber-500 to-amber-600 rounded-3xl transform rotate-3" />
               <div className="relative z-10 w-full h-[600px]">
                 <Image
-                  src="/assets/noi.jpg"
+                  src="/assets/Noi.jpg"
                   alt="Chef Noi in haar keuken"
                   fill
                   className="object-cover rounded-3xl"
