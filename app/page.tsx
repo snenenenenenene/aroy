@@ -161,8 +161,7 @@ export default function Home() {
                   uithaalrestaurant Aroy te Brasschaat.
                 </p>
                 <p>
-                  Voor de klassieker Pad Thai kwam men van ver deze uit te halen. U moet natuurlijk weten dat de echte 
-                  verse al dente krachtiger en beter smaakt dan uithaal dewelke gemiddeld half uur in verpakking zit.
+                  Voor de klassieker Pad Thai kwam men van ver deze uit te halen. U moet natuurlijk weten dat Thais al dente krachtiger en beter smaakt. Uithaal of voorbereid traiteur verliest kracht en smaakt van heerlijke thaise kruiderij.
                 </p>
                 <p>
                   Nu deel ik graag mijn kunsten en passie bij u thuis, vers en gemakkelijk. You&apos;re the king!
@@ -174,7 +173,7 @@ export default function Home() {
       </section>
 
       <InfoSection />
-      <DevelopmentBanner />
+      {/* <DevelopmentBanner /> */}
     </div>
   );
 }
